@@ -124,5 +124,5 @@ the answer would be 41
     >   it is called a shebang, and it specifies to the shell the corresct program to interpret the script with once it’s being executed. (http://stackoverflow.com/questions/13872048/bash-script-what-does-bin-bash-mean)
 
 17. How many unique images are in the ``sipi_images`` folder?
-    >   215
+    >   212
     
