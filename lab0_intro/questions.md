@@ -41,6 +41,7 @@ jdelavega@ubuntu:~/unixstuff$ find . -prune
 jdelavega@ubuntu:~/unixstuff$
 
 
+<<<<<<< HEAD
 5.  Where is the file ``xxxxxx``
     >   you would have to search the computer using the commands:
 %cd
@@ -63,6 +64,16 @@ jdelavega@ubuntu:~$ find ~ -name '*gnu*'
     >   we would have to type:
 %grep -rli gpl ~/usr/src | wc -l
 however the result was 0 for my computer.
+=======
+5.  Where is the file ``grub.cfg``
+    >   answer
+
+6.  How many files with ``gnu`` in its name are in ``/usr/src``
+    >   answer
+
+7.  How many files contain ``gpl`` inside in ``/usr/src``
+    >   answer
+>>>>>>> FETCH_HEAD
 
 8.  What does the ``cut`` command do?
     >   The cut command prints the selected parts of lines in a file. The selected parts may be specified by the bytes, characters or fields, each accompanied by numbers or ranges separated by commas that indicate the selected parts of the file. (%info cut)

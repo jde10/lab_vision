@@ -81,12 +81,20 @@ The [imread](http://www.mathworks.com/help/matlab/ref/imread.html) command is us
     
     What is the dimension of the output?
 
+<<<<<<< HEAD
     >   256x256
+=======
+    >   Answer
+>>>>>>> FETCH_HEAD
 
 3.  Read the ``4.2.03`` image
     What is the dimension of the output?
 
+<<<<<<< HEAD
     >   512x512x3
+=======
+    >   Answer
+>>>>>>> FETCH_HEAD
 
 ## Displaying Images
 
@@ -99,7 +107,11 @@ The following commands can be used for displaying images
 2.  Try displaying the images read in the previous point using both commands
 3.  What are the differences?
 
+<<<<<<< HEAD
     >   Imshow displays the image in a figure window with no modification, while image displays the image with an axis on the outer border that indicates the pixel matrix
+=======
+    >   Answer
+>>>>>>> FETCH_HEAD
 
 ## Writing Images
 
@@ -108,13 +120,20 @@ The [imwrite](http://www.mathworks.com/help/matlab/ref/imwrite.html) image is us
 1.  Look at the manual page
 2.  Write one of the images from before as png and as jpg
 3.  Write a matlab function that takes the path of an image and converts it to jpg
+<<<<<<< HEAD
 	> path2JPEG
+=======
+>>>>>>> FETCH_HEAD
 
 ## Matlab and the shell
 
 ### Shell from Matlab
 
+<<<<<<< HEAD
 It is possible to execute bash commands from matlab by using the [system](http://www.mathworks.com/help/matlab/ref/system.html) command
+=======
+It is possible to excecute bash commands from matlab by using the [system](http://www.mathworks.com/help/matlab/ref/system.html) command
+>>>>>>> FETCH_HEAD
 or by using a [bang](http://www.mathworks.com/help/matlab/matlab_env/run-external-commands-scripts-and-programs.html)
 
 1.  Look at the manual pages
@@ -139,7 +158,10 @@ If the command or script doesn't end in ``exit`` the matlab shell will stay open
     -   Or a matlab script that calls bash 
     -   Or both
 2.  Save this script in the matlab lab folder of your git repository
+<<<<<<< HEAD
 	> pathAll2JPEG.m
+=======
+>>>>>>> FETCH_HEAD
 
 ## Filters
 
@@ -152,7 +174,11 @@ We can do this to simulate difficult capture conditions, and evaluate the algori
 2.  Try the diffente noise types, and save the noisy images to the repository (5 images)
 3.  Try saving noisy images as jpg, what happens?
 
+<<<<<<< HEAD
     > The image will be saved but the resolution is much lower, compared to the .tiff image. This will make the image seem noisier, for its pixels seem to be bigger (and so it looses information).
+=======
+    > Answer
+>>>>>>> FETCH_HEAD
 
 ### Median filter
 
@@ -166,7 +192,11 @@ These filters can be applied to a an image in order to remove noise.
 3.  Try different sizes for the filters
 4.  Which filter works best for salt & pepper noise?
 
+<<<<<<< HEAD
     > The median filter, because it takes the median, not any extremes, and it doesn’t create new data points, it uses the existing ones.
+=======
+    > Answer
+>>>>>>> FETCH_HEAD
 
 For more on noise removal read http://www.mathworks.com/help/images/noise-removal.html
 
@@ -179,7 +209,11 @@ which can be otained from [fspecial](http://www.mathworks.com/help/images/ref/fs
 2.  Try different sizes for the filters
 3.  What differences do you notice?
 
+<<<<<<< HEAD
     > As the filter gets bigger in size, there is more smoothing. When sigma is 0.5, the mean filter smoothes more than the gaussian filter, however, by making sigma larger, the smoothing done by the gaussian filter can be greater than that done by the mean filter. The mean filter blurs more the image because it places the average of all the pixels in the image to the center pixel, whilst the gaussian filter makes a weighed average, in which closer pixels weight more than pixels further away.  
+=======
+    > Answer
+>>>>>>> FETCH_HEAD
 
 ### Sharpen
 
@@ -187,11 +221,19 @@ The [imsharpen](http://www.mathworks.com/help/images/ref/imsharpen.html) functio
 
 1.  Sharp the ``5.1.12`` image. What do you notice?
 
+<<<<<<< HEAD
     > things that were dark are now darker, and the numbers in the clock seem to be clearer, more in focus. Also, the edges are now well defined
 
 2.  Sharp a blurred image. What do you notice?
 
     > The image appears less blurry, however it has less resolution than the original image. 
+=======
+    > Answer
+
+2.  Sharp a blurred image. What do you notice?
+
+    > Answer
+>>>>>>> FETCH_HEAD
 
 ### Edge detection
 
@@ -206,6 +248,7 @@ Notice that the last two filters detect horizontal edges, in order to detect ver
 1.  Try applying this filters
 2.  What is the difference between prewitt and sobel?
 
+<<<<<<< HEAD
     > Prewitt and Sobel filters are very good at detecting the objects edges in the image, however, sobel filter gives more weight to the pixels closer to the center pixel, making the edges found by the type of filter be clearer. Prewitt’s filter has the same weight on all the pixels of the border, either all are -1 or +1, even the center pixels in the top and bottom row have the same value, this will make for more fuzzy borders. In a Prewitt filter it is the same to have a border touching a corner pixel as it is to have a border right down the middle. A Sobel filter enhances those borders that go right through the middle.
 Prewitt filter:
      1     1     1
@@ -216,6 +259,9 @@ Sobel filter:
      1     2     1
      0     0     0
     -1    -2    -1
+=======
+    > Answer
+>>>>>>> FETCH_HEAD
 
 More sophisticated methods for finding edges can be found in the following pages
     -   http://www.mathworks.com/discovery/edge-detection.html
@@ -270,11 +316,19 @@ The [impyramid](http://www.mathworks.com/help/images/ref/impyramid.html) functio
 2.  Create a four level pyramid from the ``5.1.12`` clock  image
 3.  At what level does the people in the picture dissappear?
 
+<<<<<<< HEAD
     >   The people present on the picture on the left are present only in the first level of the pyramid, whilst the man on the right picture is present up to the second level. So in total they disappear at the second and third level, for the left and right picture respectively. 
     
 4.  At what level does the numbers in the clock disappear?
 
     >   The numbers in the clock disappear at the third level. 
+=======
+    >   Answer
+    
+4.  At what level does the numbers in the clock disappear?
+
+    >   Answer
+>>>>>>> FETCH_HEAD
 
 ## Template Matching
 
@@ -314,13 +368,21 @@ The [norm2corrx](http://www.mathworks.com/help/images/ref/normxcorr2.htm) can be
     ```
 6.  Explain what the above code does
 
+<<<<<<< HEAD
     > the first line of code corresponds to the normalised cross correlation, this will find the train in the image, the anything similar to the train would be closer to 1, center pixel most similar would be the most close to 1. In the second line of code, the size of the image ‘image’ is determined, and in the third line of code, the size of the cropped train image is divided by two and rounded down. These two last variables are used to remove the excess borders on the image (for the image generated is larger than the original image. So, this way, c2 will make the image obtained by the normalised cross correlation smaller, in order for it to be the same size as the original. c3 will make the  differences even larger, making it more noticeable where the train is located in the cross correlation map. The cr channel will then make the cross correlation map take values between 0 and 1, instead of the original -1 to 1. Y, that corresponds to the luminance, will be equal to the grayscale of the image, so that is why the Y equation is just taking the grayscale of the image ‘image’. And, the cb channel is just an image with the middle value of the cross correlation, 0.5, in every pixel. Afterwards, the three channels are joined in the YCbCr color space and transformed to the rgb color space, and it is viewed by using the imshow command.  
+=======
+    > Answer
+>>>>>>> FETCH_HEAD
     
 7.  Now lets find the train in the next frame, read image ``motion05.512.tiff``.
 8.  Apply the procedure written above to it (use the train template from the past frame)
 9.  What are the limitations of this method?
 
+<<<<<<< HEAD
     > The limitations to this method are that it is bound to the size of the template, and the angulation, so it will only be a perfect match if the template is taken from the exact image.this is because only then will the cross correlation map have a value equal to one. Otherwise, there will only be numbers near 1, if the image is very much alike. 
+=======
+    > Answer
+>>>>>>> FETCH_HEAD
 
 See [here](http://www.mathworks.com/help/images/examples/registering-an-image-using-normalized-cross-correlation.html)
 another example.
