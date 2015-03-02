@@ -6,7 +6,7 @@ I_p = imread('C:\Users\j.de10\Documents\GitHub\lab_vision\lab3_hybrid\Data\plane
 s_Ib = size(I_b);
 s_Ip = size(I_p);
 
-h_lp = fspecial('gaussian');        %low pass
+h_lp = fspecial('gaussian’, 33, 8);        %low pass
 
 %apply High pass filter to bird
 
@@ -67,5 +67,28 @@ Hyb = I_b_highp + I_p_lowp;
 figure (5)
 imshow(Hyb)
 title('Hybrid Plane Bird');
+print(‘-djpeg’,’basePyramidPlaneBird.jpg’) 
+
+%forming the pyramid
+X1 = impyramid(Hyb, 'reduce');
+X2 = impyramid(X1, 'reduce');
+X3 = impyramid(X2, 'reduce');
+X4 = impyramid(X3, 'reduce');
+
+%View images
+
+figure(6), imshow(X1)
+print(‘-djpeg’,’level1_PyramidPlaneBird.jpg’);
+ 
+figure(7), imshow(X2)
+print(‘-djpeg’,’level2_PyramidPlaneBird.jpg’);
+ 
+figure(8), imshow(X3)
+print(‘-djpeg’,’level3_PyramidPlaneBird.jpg’);
+
+figure(9), imshow(X4)
+print(‘-djpeg’,’level4_PyramidPlaneBird.jpg’); 
+
+
 
 
