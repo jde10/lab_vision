@@ -1,49 +1,7 @@
 function phow_ImagenetTiny()
-% PHOW_CALTECH101 Image classification in the Caltech-101 dataset
-%   This program demonstrates how to use VLFeat to construct an image
-%   classifier on the Caltech-101 data. The classifier uses PHOW
-%   features (dense SIFT), spatial histograms of visual words, and a
-%   Chi2 SVM. To speedup computation it uses VLFeat fast dense SIFT,
-%   kd-trees, and homogeneous kernel map. The program also
-%   demonstrates VLFeat PEGASOS SVM solver, although for this small
-%   dataset other solvers such as LIBLINEAR can be more efficient.
-%
-%   By default 15 training images are used, which should result in
-%   about 64% performance (a good performance considering that only a
-%   single feature type is being used).
-%
-%   Call PHOW_CALTECH101 to train and test a classifier on a small
-%   subset of the Caltech-101 data. Note that the program
-%   automatically downloads a copy of the Caltech-101 data from the
-%   Internet if it cannot find a local copy.
-%
-%   Edit the PHOW_CALTECH101 file to change the program configuration.
-%
-%   To run on the entire dataset change CONF.TINYPROBLEM to FALSE.
-%
-%   The Caltech-101 data is saved into CONF.CALDIR, which defaults to
-%   'data/caltech-101'. Change this path to the desired location, for
-%   instance to point to an existing copy of the Caltech-101 data.
-%
-%   The program can also be used to train a model on custom data by
-%   pointing CONF.CALDIR to it. Just create a subdirectory for each
-%   class and put the training images there. Make sure to adjust
-%   CONF.NUMTRAIN accordingly.
-%
-%   Intermediate files are stored in the directory CONF.DATADIR. All
-%   such files begin with the prefix CONF.PREFIX, which can be changed
-%   to test different parameter settings without overriding previous
-%   results.
-%Spatial
-%   The program saves the trained model in
-%   <CONF.DATADIR>/<CONF.PREFIX>-model.mat. This model can be used to
-%   test novel images independently of the Caltech data.
-%
-%     load('data/baseline-model.mat') ; # change to the model path
-%     label = model.classify(model, im) ;
-%
+% PHOW_CALTECH101 modification file, works with Imagenet Tiny images and classifies them
 
-% Author: Andrea Vedaldi
+% Author of original code: Andrea Vedaldi
 
 % Copyright (C) 2011-2013 Andrea Vedaldi
 % All rights reserved.
